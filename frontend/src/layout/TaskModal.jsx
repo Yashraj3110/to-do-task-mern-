@@ -30,7 +30,7 @@ function TaskModal({ show, editingTask, onClose, onSave }) {
     const [description, setDescription] = useState('');
     const [saving, setSaving] = useState(false);
 
-    // Load task details when opening the modal
+   
     useEffect(() => {
         if (show) {
             if (editingTask) {

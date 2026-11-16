@@ -9,7 +9,7 @@ import TaskModal from './layout/TaskModal';
 import TaskCard from './layout/TaskCard';
 import SearchTasks from './layout/SearchTask';
 
-const API = import.meta.env.VITE_API_URL || 'http://localhost:5000/api/tasks';
+const API = import.meta.env.VITE_API_URL || 'https://to-do-task-mern-94bj.onrender.com/api/tasks';
 
 const notyf = new Notyf({
     duration: 2500,
