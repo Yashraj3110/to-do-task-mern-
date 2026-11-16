@@ -100,11 +100,7 @@ function TaskCard({ task, onEdit, onDelete, onStatusChange }) {
                                 type="button"
                                 className="task-icon-button task-delete-button"
                                 onClick={() => {
-                                    if (isTouchDevice) {
-                                        setShowDelete(!showDelete);
-                                    } else {
-                                        onDelete(task._id);
-                                    }
+                                   onDelete(task._id)
                                 }}
                                 title="Delete task"
                                 aria-label={`Delete ${task.title}`}
