@@ -97,7 +97,7 @@ function Dashboard() {
     const weekEnd = new Date(weekStart);
     weekEnd.setDate(weekEnd.getDate() + 6);
 
-    // Filter tasks for selected week
+   
     const weeklyTasks = tasks.filter(task => {
         return (
             task.date >= getDateKey(weekStart) &&
@@ -105,12 +105,12 @@ function Dashboard() {
         );
     });
 
-    // Filter tasks for selected date
+   
     const todayTasks = weeklyTasks.filter(task => {
         return task.date === getDateKey(selectedDate);
     });
 
-    // Tasks displayed on Dashboard
+   
     const visibleTasks = showAll
         ? weeklyTasks
         : todayTasks;
@@ -126,7 +126,7 @@ function Dashboard() {
         ? Math.round((completedTasks / weeklyTasks.length) * 100)
         : 0;
 
-    // Open Add Task modal
+
     const handleAddTask = () => {
         setEditingTask(null);
         setShowModal(true);
@@ -483,7 +483,7 @@ function Dashboard() {
                 </main>
             )}
 
-            {/* Floating Add Button - Dashboard only */}
+           
             {!showSearchPage && (
                 <button
                     className="add-task-fab"
@@ -494,7 +494,7 @@ function Dashboard() {
                 </button>
             )}
 
-            {/* Add/Edit Task Modal */}
+           
             <TaskModal
                 show={showModal}
                 editingTask={editingTask}
@@ -505,7 +505,7 @@ function Dashboard() {
                 onSave={handleSaveTask}
             />
 
-            {/* Task Details Modal */}
+            
             {selectedTask && (
 
                 <>

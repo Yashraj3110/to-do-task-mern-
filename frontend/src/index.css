@@ -422,20 +422,26 @@ select {
 
 .add-task-fab {
     position: fixed;
-    right: max(calc((100vw - 760px) / 2), 24px);
-    bottom: 28px;
-    z-index: 1000;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+
     display: flex;
-    width: 56px;
-    height: 56px;
     align-items: center;
     justify-content: center;
-    border: 0;
-    border-radius: 50%;
-    background: #4863ef;
+
+    border: none;
+    background: #2563eb;
     color: #fff;
-    font-size: 23px;
-    box-shadow: 0 5px 18px rgba(72, 99, 239, 0.25);
+    font-size: 24px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    z-index: 1000;
 }
 
 .add-task-fab:hover {
